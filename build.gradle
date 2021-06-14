@@ -31,4 +31,7 @@ dependencies {
 
     /* --- Log4j2 --- */
     compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
+
+    /* --- Jackson --- */
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
 }

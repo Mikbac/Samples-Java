@@ -11,3 +11,5 @@
 ### Java Collections Framework extension.
 * [Google Guava](https://github.com/google/guava) - set of core Java libraries from Google that includes new collection types, immutable collections, a graph library, and utilities for concurrency, I/O, hashing, caching, primitives, strings
 
+### Jackson serialization 
+Jackson ObjectMapper class to serialize Java objects into JSON and deserialize JSON string into Java objects.
