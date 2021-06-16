@@ -1,7 +1,7 @@
-package pl.samples.SerializationJackson;
+package pl.samples.Gson.Serialization;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import pl.samples.Gson.Serialization.Model.FeatureModel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,14 +19,7 @@ public class SerializeMap {
         featureModelMap.put("Key-2", new FeatureModel("bbb", "222"));
         featureModelMap.put("Key-3", new FeatureModel("ccc", "333"));
 
-        ObjectMapper mapper = new ObjectMapper();
-
-        String json = null;
-        try {
-            json = mapper.writeValueAsString(featureModelMap);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace(); // Error while parasing Map<String, FeatureModel> to JSON
-        }
+        String json = new Gson().toJson(featureModelMap);
 
         System.out.println(json);
         // {"Key-1":{"key":"aaa","value":"111"},"Key-2":{"key":"bbb","value":"222"},"Key-3":{"key":"ccc","value":"333"}}

@@ -1,12 +1,16 @@
-package pl.samples.SerializationJackson;
+package pl.samples.Jackson.Serialization.Model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Created by MikBac on 15.06.2021
  */
 public class FeatureModel {
 
+    @JsonProperty("key")
     private String key;
 
+    @JsonProperty("value")
     private String value;
 
     public FeatureModel(final String key, final String value) {
