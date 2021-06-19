@@ -15,3 +15,6 @@
 
 ### Jackson Gson 
 * [Gson](https://github.com/google/gson) - open-source Java library to serialize and deserialize Java objects to (and from) JSON.
+
+### Quartz
+* [Quartz](http://www.quartz-scheduler.org/) - open source job-scheduling framework written entirely in Java and designed for use in both J2SE and J2EE applications.
