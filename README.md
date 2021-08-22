@@ -18,3 +18,6 @@
 
 ### Quartz
 * [Quartz](http://www.quartz-scheduler.org/) - open source job-scheduling framework written entirely in Java and designed for use in both J2SE and J2EE applications.
+
+### Jsoup
+* [Jsoup](https://jsoup.org/) - is a Java library for working with real-world HTML. It provides a very convenient API for fetching URLs and extracting and manipulating data, using the best of HTML5 DOM methods and CSS selectors.
