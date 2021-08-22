@@ -1,8 +1,12 @@
 package pl.samples.ExecutorService;
 
+import lombok.extern.log4j.Log4j2;
+
 /**
  * Created by MikBac on 08.10.2020
  */
+
+@Log4j2
 public class Task implements Runnable {
 
     private final int id;
@@ -13,6 +17,6 @@ public class Task implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Task type class -> " + id);
+        log.info("Task type class -> {}", id);
     }
 }

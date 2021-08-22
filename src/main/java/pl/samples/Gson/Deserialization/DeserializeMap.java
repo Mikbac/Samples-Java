@@ -2,6 +2,7 @@ package pl.samples.Gson.Deserialization;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import lombok.extern.log4j.Log4j2;
 import pl.samples.Gson.Deserialization.Model.FeatureModel;
 
 import java.lang.reflect.Type;
@@ -11,6 +12,7 @@ import java.util.Map;
  * Created by MikBac on 15.06.2021
  */
 
+@Log4j2
 public class DeserializeMap {
 
     public static void main(String[] args) {
@@ -25,7 +27,7 @@ public class DeserializeMap {
 
         Map<String, FeatureModel> featureModelMap = new Gson().fromJson(json, listType);
 
-        featureModelMap.forEach((key, value) -> System.out.println(key + " -key-> " + value.getKey() + " -value-> " + value.getValue()));
+        featureModelMap.forEach((key, value) -> log.info("{} -key-> {} -value-> {}", key, value.getKey(), value.getValue()));
     }
 
 }

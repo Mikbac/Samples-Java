@@ -1,5 +1,7 @@
 package pl.samples.ExecutorService;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
@@ -9,6 +11,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+@Log4j2
 class Main {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -31,7 +34,7 @@ class Main {
         Runnable task = () -> {
             try {
                 TimeUnit.MILLISECONDS.sleep(1000);
-                System.out.println("Task type lambda -> " + LocalDateTime.now());
+                log.info("Task type lambda -> {}", LocalDateTime.now());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -59,7 +62,7 @@ class Main {
          * Execute tasks - with submit
          */
         Future<String> result = executorService.submit(task, "Message then done");
-        System.out.println(result.get());
+        log.info(result.get());
 
         /*
          * Shut down the executor service

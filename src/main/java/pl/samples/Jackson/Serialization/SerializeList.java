@@ -2,6 +2,7 @@ package pl.samples.Jackson.Serialization;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.log4j.Log4j2;
 import pl.samples.Jackson.Serialization.Model.FeatureModel;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
  * Created by MikBac on 15.06.2021
  */
 
+@Log4j2
 public class SerializeList {
 
     public static void main(String[] args) {
@@ -35,7 +37,7 @@ public class SerializeList {
             e.printStackTrace(); // Error while parasing List<FeatureModel> to JSON
         }
 
-        System.out.println(json);
+        log.info(json);
         // [{"key":"aaa","value":"111"},{"key":"bbb","value":"222"},{"key":"ccc","value":"333"}]
     }
 
@@ -55,7 +57,7 @@ public class SerializeList {
             e.printStackTrace(); // Error while parasing List<String> to JSON
         }
 
-        System.out.println(json);
+        log.info(json);
         // ["aaa","bbb","ccc"]
     }
 

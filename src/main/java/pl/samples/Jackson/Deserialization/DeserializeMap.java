@@ -3,6 +3,7 @@ package pl.samples.Jackson.Deserialization;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.log4j.Log4j2;
 import pl.samples.Jackson.Deserialization.Model.FeatureModel;
 
 import java.util.Map;
@@ -11,6 +12,7 @@ import java.util.Map;
  * Created by MikBac on 15.06.2021
  */
 
+@Log4j2
 public class DeserializeMap {
 
     public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class DeserializeMap {
             e.printStackTrace(); // Error while deserialization JSON to Map<String, FeatureModel>
         }
 
-        featureModelMap.forEach((key, value) -> System.out.println(key + " -key-> " + value.getKey() + " -value-> " + value.getValue()));
+        featureModelMap.forEach((key, value) -> log.info("{} -key-> {} -value-> {}", key, value.getKey(), value.getValue()));
     }
 
 }

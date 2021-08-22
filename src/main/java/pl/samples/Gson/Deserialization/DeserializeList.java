@@ -2,6 +2,7 @@ package pl.samples.Gson.Deserialization;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import lombok.extern.log4j.Log4j2;
 import pl.samples.Gson.Deserialization.Model.FeatureModel;
 
 import java.lang.reflect.Type;
@@ -12,6 +13,7 @@ import java.util.List;
  * Created by MikBac on 15.06.2021
  */
 
+@Log4j2
 public class DeserializeList {
 
     public static void main(String[] args) {
@@ -28,7 +30,7 @@ public class DeserializeList {
 
         List<FeatureModel> featureModelList = new Gson().fromJson(json, listType);
 
-        featureModelList.forEach(f -> System.out.println(f.getKey() + " <--> " + f.getValue()));
+        featureModelList.forEach(f -> log.info("{} <--> {}", f.getKey(), f.getValue()));
     }
 
     private static void serializeStringList() {
@@ -39,7 +41,7 @@ public class DeserializeList {
 
         List<String> wordsList = new Gson().fromJson(json, listType);
 
-        wordsList.forEach(System.out::println);
+        wordsList.forEach(log::info);
     }
 
 }

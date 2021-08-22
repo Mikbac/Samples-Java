@@ -7,14 +7,15 @@ import io.vavr.collection.List;
 import io.vavr.collection.Stream;
 import io.vavr.control.Either;
 import io.vavr.control.Option;
+import lombok.extern.log4j.Log4j2;
 
 import static io.vavr.API.$;
 import static io.vavr.API.Case;
 import static io.vavr.API.Match;
-import static io.vavr.Predicates.isIn;
 import static io.vavr.Predicates.is;
+import static io.vavr.Predicates.isIn;
 
-
+@Log4j2
 class Main {
 
     public static void main(String[] args) {
@@ -55,7 +56,7 @@ class Main {
 
         // Option
         Option.of("123")
-                .peek(System.out::println)
+                .peek(log::info)
                 .map(String::toUpperCase)
                 .getOrElse("");
 
@@ -73,7 +74,7 @@ class Main {
         Either<String, Integer> ans1 = exampleOne(10);
 
         // Pattern Matching
-        double ans2 =  Match(10).of(
+        double ans2 = Match(10).of(
                 // var == 1
                 Case($(is(1)), 1.0),
                 // var == 2 || var == 3 || var == 4
@@ -87,7 +88,7 @@ class Main {
 
     // Either
     private static Either<String, Integer> exampleOne(final int var) {
-        if(var != 10) {
+        if (var != 10) {
             return Either.left("Var is not 10");
         } else {
             return Either.right(var);

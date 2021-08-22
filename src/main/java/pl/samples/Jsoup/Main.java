@@ -1,5 +1,6 @@
 package pl.samples.Jsoup;
 
+import lombok.extern.log4j.Log4j2;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -11,6 +12,7 @@ import java.io.IOException;
  * Created by MikBac on 02.07.2021
  */
 
+@Log4j2
 public class Main {
 
     public static void main(String[] args) {
@@ -19,7 +21,7 @@ public class Main {
         try {
             document = Jsoup.connect("https://en.wikipedia.org/").get();
         } catch (IOException e) {
-            System.out.println("Error connection to the Wikipedia!");
+            log.info("Error connection to the Wikipedia!");
         }
 
         getTagTitle(document);
@@ -28,19 +30,19 @@ public class Main {
     }
 
     private static void getTagTitle(final Document document) {
-        System.out.println(document.title());
+        log.info("Document title -> {}", document.title());
     }
 
     private static void getTagBody(final Document document) {
-        System.out.println(document.body());
-        System.out.println(document.body().className());
+        log.info("Document body -> {}", document.body());
+        log.info("Document body className -> {}", document.body().className());
     }
 
     private static void getAttribute(final Document document) {
         Elements newsHeadlines = document.select("#mp-itn b a");
         for (Element headline : newsHeadlines) {
-            System.out.println(headline.attr("title"));
-            System.out.println(headline.absUrl("href"));
+            log.info("Selector attribute title -> {}", headline.attr("title"));
+            log.info("Selector attribute href -> {}", headline.absUrl("href"));
         }
     }
 

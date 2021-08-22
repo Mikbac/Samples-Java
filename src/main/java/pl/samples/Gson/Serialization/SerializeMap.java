@@ -1,6 +1,7 @@
 package pl.samples.Gson.Serialization;
 
 import com.google.gson.Gson;
+import lombok.extern.log4j.Log4j2;
 import pl.samples.Gson.Serialization.Model.FeatureModel;
 
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.Map;
  * Created by MikBac on 15.06.2021
  */
 
+@Log4j2
 public class SerializeMap {
 
     public static void main(String[] args) {
@@ -21,7 +23,7 @@ public class SerializeMap {
 
         String json = new Gson().toJson(featureModelMap);
 
-        System.out.println(json);
+        log.info(json);
         // {"Key-1":{"key":"aaa","value":"111"},"Key-2":{"key":"bbb","value":"222"},"Key-3":{"key":"ccc","value":"333"}}
 
     }

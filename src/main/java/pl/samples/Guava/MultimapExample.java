@@ -2,7 +2,9 @@ package pl.samples.Guava;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 public class MultimapExample {
 
     private static final String USER_CART_ONE = "user-cart-1";
@@ -22,11 +24,11 @@ public class MultimapExample {
         multimap.put(USER_CART_TWO, "scissors");
         multimap.put(USER_CART_TWO, "pen");
 
-        System.out.println("multimap key quantity = " + multimap.keySet().size()); // 2
-        System.out.println("multimap size = " + multimap.size()); // 5
+        log.info("multimap key quantity = {}", multimap.keySet().size()); // 2
+        log.info("multimap size = {}", multimap.size()); // 5
 
         multimap.get(USER_CART_ONE).forEach(k -> {
-            System.out.println(k); // [apple, banana, lemon]
+            log.info(k); // [apple, banana, lemon]
         });
 
     }

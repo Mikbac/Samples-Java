@@ -1,6 +1,7 @@
 package pl.samples.Gson.Serialization;
 
 import com.google.gson.Gson;
+import lombok.extern.log4j.Log4j2;
 import pl.samples.Gson.Serialization.Model.FeatureModel;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
  * Created by MikBac on 15.06.2021
  */
 
+@Log4j2
 public class SerializeList {
 
     public static void main(String[] args) {
@@ -27,7 +29,7 @@ public class SerializeList {
 
         String json = new Gson().toJson(featureModelList);
 
-        System.out.println(json);
+        log.info(json);
         // [{"key":"aaa","value":"111"},{"key":"bbb","value":"222"},{"key":"ccc","value":"333"}]
     }
 
@@ -40,7 +42,7 @@ public class SerializeList {
 
         String json = new Gson().toJson(wordsList);
 
-        System.out.println(json);
+        log.info(json);
         // ["aaa","bbb","ccc"]
     }
 

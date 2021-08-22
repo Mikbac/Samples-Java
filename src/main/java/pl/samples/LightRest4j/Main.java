@@ -8,7 +8,7 @@ import java.net.InetSocketAddress;
 
 class Main {
 
-    public static void getServer(final HttpServer server, final String address, final String message) throws IOException {
+    public static void getServer(final HttpServer server, final String address, final String message) {
 
         server.createContext(address, (exchange -> {
             if ("GET".equals(exchange.getRequestMethod())) {
@@ -25,17 +25,16 @@ class Main {
             exchange.close();
         }));
 
-
     }
 
     public static void main(String[] args) throws IOException {
         HttpServer serverOne = HttpServer.create(new InetSocketAddress(8080), 0);
-        getServer(serverOne,  "/api/hello", "Hello world!");
+        getServer(serverOne, "/api/hello", "Hello world!");
         serverOne.setExecutor(null); // default executor
         serverOne.start();
 
         HttpServer serverTwo = HttpServer.create(new InetSocketAddress(8081), 0);
-        getServer(serverTwo,  "/api/bye", "Bye world!");
+        getServer(serverTwo, "/api/bye", "Bye world!");
         serverTwo.setExecutor(null); // default executor
         serverTwo.start();
     }
