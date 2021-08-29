@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 
 @Log4j2
-public class Main {
+public class ParseUrl {
 
     public static void main(String[] args) {
         Document document = null;
