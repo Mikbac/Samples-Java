@@ -41,4 +41,8 @@ dependencies {
     /* --- Jsoup --- */
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
 
+    /* --- MapStruct --- */
+    implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.4.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+
 }
