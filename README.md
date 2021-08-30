@@ -27,3 +27,6 @@
 
 ### MapStruct
 * [MapStruct](https://mapstruct.org/) - is a code generator that greatly simplifies the implementation of mappings between Java bean types based on a convention over configuration approach.
+
+### Feign
+* [OpenFeign](https://github.com/OpenFeign/feign) and [Netflix Feign](https://mvnrepository.com/artifact/com.netflix.feign) - is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket.
