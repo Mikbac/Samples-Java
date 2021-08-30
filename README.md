@@ -21,3 +21,6 @@
 
 ### Jsoup
 * [Jsoup](https://jsoup.org/) - is a Java library for working with real-world HTML. It provides a very convenient API for fetching URLs and extracting and manipulating data, using the best of HTML5 DOM methods and CSS selectors.
+
+### Lombok
+* [Lombok](https://projectlombok.org/) - is a java library that automatically plugs into your editor and build tools, spicing up your java.
