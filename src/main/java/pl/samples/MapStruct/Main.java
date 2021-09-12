@@ -13,7 +13,6 @@ public class Main {
 
         UserModel user = UserModel.builder()
                 .username("Admin")
-                .password("admin1")
                 .addressOne("Lorem ipsum")
                 .build();
 

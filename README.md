@@ -30,3 +30,6 @@
 
 ### Feign
 * [OpenFeign](https://github.com/OpenFeign/feign) and [Netflix Feign](https://mvnrepository.com/artifact/com.netflix.feign) - is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket.
+
+### iText
+* [iText](https://itextpdf.com/en/products/itext-7) - 
