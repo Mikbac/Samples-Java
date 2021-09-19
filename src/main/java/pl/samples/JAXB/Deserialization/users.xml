@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <version>v1</version>
+    <userList>
+        <name>Alice</name>
+        <surname>Ecila</surname>
+    </userList>
+    <userList>
+        <name>Bob</name>
+        <surname>Bob</surname>
+    </userList>
+</root>

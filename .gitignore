@@ -5,3 +5,7 @@
 
 # Idea
 .idea/
+
+# Demo files
+/src/main/java/pl/samples/JAXB/Serialization/users.xml
+/src/main/java/pl/samples/iText/example.pdf
