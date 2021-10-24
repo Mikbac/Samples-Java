@@ -58,4 +58,7 @@ dependencies {
     // Older versions (2.7.x etc.) don't work properly -> TODO: Check and update the version in the future when it works
     implementation group: 'org.python', name: 'jython', version: '2.5.3'
 
+    /* --- Mustache --- */
+    implementation group: 'com.github.spullara.mustache.java', name: 'compiler', version: '0.9.10'
+
 }
