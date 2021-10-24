@@ -11,14 +11,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try(PythonInterpreter pyInterp = new PythonInterpreter()) {
-//            pyInterp.exec("print('Hello Python World!')");
-//
-//            pyInterp.exec("x = 10+10");
-//            PyObject x = pyInterp.get("x");
-//
-//            System.out.println(x.toString());
-        }
+        PythonInterpreter pyInterp = new PythonInterpreter();
+        pyInterp.exec("print('Hello Python World!')");
+
+        pyInterp.exec("x = 10+10");
+        PyObject x = pyInterp.get("x");
+
+        System.out.println(x.toString());
 
     }
 
