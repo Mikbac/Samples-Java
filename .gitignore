@@ -2,6 +2,7 @@
 /.gradle/
 /build/
 /build/classes/java/main/
+/.jython_cache/
 
 # Idea
 .idea/

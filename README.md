@@ -35,4 +35,7 @@
 * [iText](https://itextpdf.com/en/products/itext-7) - is a library for creating and manipulating PDF files in Java.
 
 ### JAXB
-* [JAXB](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/jaxb/index.html) (Java Architecture for XML) - 
+* [JAXB](https://docs.oracle.com/javase/8/docs/technotes/guides/xml/jaxb/index.html) (Java Architecture for XML) -  provides a fast and convenient way to marshal (write) Java objects into XML and un-marshal (read) XML into objects.
+
+### Jython
+* [Jython](https://www.jython.org/) - is a Java implementation of Python that combines expressive power with clarity.

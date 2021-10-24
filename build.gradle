@@ -54,4 +54,7 @@ dependencies {
     implementation group: 'com.itextpdf', name: 'itext7-core', version: '7.1.16', ext: 'pom'
     implementation group: 'com.itextpdf', name: 'html2pdf', version: '3.0.5'
 
+    /* --- Jython --- */
+    implementation group: 'org.python', name: 'jython', version: '2.7.2'
+
 }
