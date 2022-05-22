@@ -64,4 +64,6 @@ dependencies {
     /* --- Joda Time --- */
     implementation group: 'joda-time', name: 'joda-time', version: '2.10.13'
 
+    /* --- Tradukisto --- */
+    implementation group: 'pl.allegro.finance', name: 'tradukisto', version: '1.10.6'
 }
