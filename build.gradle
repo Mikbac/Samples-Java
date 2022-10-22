@@ -66,4 +66,7 @@ dependencies {
 
     /* --- Tradukisto --- */
     implementation group: 'pl.allegro.finance', name: 'tradukisto', version: '1.10.6'
+
+    /* --- Univocity Parsers --- */
+    implementation group: 'com.univocity', name: 'univocity-parsers', version: '2.9.1'
 }
