@@ -4,11 +4,11 @@ import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 import lombok.extern.log4j.Log4j2;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -19,10 +19,9 @@ import java.util.List;
 public class CsvReader {
 
     private static final String CSV_PATH = "src/main/java/pl/samples/UnivocityParsers/sample.csv";
-    private static final String CHARSET_ENCODING = "UTF-8";
 
     public static void main(String[] args) {
-        try (Reader inputReader = new InputStreamReader(new FileInputStream((CSV_PATH)), CHARSET_ENCODING)) {
+        try (Reader inputReader = new InputStreamReader(new FileInputStream((CSV_PATH)), StandardCharsets.UTF_8)) {
             CsvParserSettings config = new CsvParserSettings();
             config.setDelimiterDetectionEnabled(true);
 
