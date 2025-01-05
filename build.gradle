@@ -10,24 +10,26 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.3.3'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+
+    /* --- JAXB --- */
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
 
     /* --- JSON serialisation --- */
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.2'
+    compileOnly group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.2'
 
     /* --- Functional programming facilities --- */
-    compile group: 'io.vavr', name: 'vavr', version: '0.10.3'
+    compileOnly group: 'io.vavr', name: 'vavr', version: '0.10.3'
 
     /* --- Guava: Google Core --- */
     implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
 
     /* --- Lombok for  Log4j2 --- */
-    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
     /* --- Log4j2 --- */
-    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
+    compileOnly group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
 
     /* --- Jackson --- */
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
@@ -69,4 +71,8 @@ dependencies {
 
     /* --- Univocity Parsers --- */
     implementation group: 'com.univocity', name: 'univocity-parsers', version: '2.9.1'
+
+    /* --- Apache Tika - Core + PDF --- */
+    implementation group: 'org.apache.tika', name: 'tika-core', version: '3.0.0'
+    implementation group: 'org.apache.tika', name: 'tika-parser-pdf-module', version: '3.0.0'
 }

@@ -51,6 +51,7 @@
 
 ## PDF
 * [iText](https://itextpdf.com/en/products/itext-7) - is a library for creating and manipulating PDF files in Java.
+* [Apache Tika](https://tika.apache.org/) - toolkit detects and extracts metadata and text from over a thousand different file types (such as PPT, XLS, and PDF).
 
 --------------------------------------------------------------------------
 
